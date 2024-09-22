@@ -1,0 +1,182 @@
+// Primary
+$Dark-cyan: hsl(158, 36%, 37%);
+$Cream: hsl(30, 38%, 92%);
+
+// Neutral
+$Very-dark-blue: hsl(212, 21%, 14%);
+$Dark-grayish-blue: hsl(228, 12%, 48%);
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(/assets/fonts/Fraunces9pt-Bold.woff2) format("woff2"),
+    url(/assets/fonts/Fraunces9pt-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-Bold.woff2) format("woff2"),
+    url(/assets/fonts/Montserrat-Bold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(/assets/fonts/Montserrat-Medium.woff2) format("woff2"),
+    url(/assets/fonts/Montserrat-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: $Cream;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  .container {
+    background-color: white;
+    width: 90%;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    .perfume-img-mobile {
+      max-width: 100%;
+      margin-bottom: 1.5rem;
+    }
+    .perfume-img-desktop {
+      max-width: 100%;
+      display: none;
+    }
+    .content-wrapper {
+      width: 85%;
+      margin: 0 auto;
+      .prefume-name {
+        h1 {
+          font-family: "Fraunces", system-ui;
+          font-weight: bold;
+          position: relative;
+          &::before {
+            content: "Perfume  ";
+            position: absolute;
+            top: -20px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            color: $Dark-grayish-blue;
+            font-family: "Montserrat";
+            font-weight: 500;
+            letter-spacing: 3px;
+          }
+        }
+      }
+      .info {
+        margin-bottom: 0.5rem;
+        p {
+          font-size: 0.825rem;
+          color: $Dark-grayish-blue;
+          font-family: "Montserrat";
+          line-height: 1.6;
+          margin: 0;
+          margin-bottom: 0.725rem;
+        }
+        .price-tag {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          margin-bottom: 1rem;
+          .current-price {
+            font-family: "Fraunces", system-ui;
+            font-weight: bold;
+            position: relative;
+            color: $Dark-cyan;
+            font-size: 2.125rem;
+          }
+          .actual-price {
+            font-size: 0.825rem;
+            color: $Dark-grayish-blue;
+            font-family: "Montserrat";
+          }
+        }
+      }
+      .btn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        font-family: "Montserrat";
+        color: white;
+        background-color: $Dark-cyan;
+        border-radius: 0.5rem;
+        padding: 0.825rem 0;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+          background-color: $Very-dark-blue;
+        }
+        .icon {
+          width: 1rem;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: 1199px) {
+      .perfume-img-mobile {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1199px) {
+      .perfume-img-desktop {
+        display: block;
+        width: 50%;
+      }
+    }
+    @media screen and (min-width: 1199px) {
+      .content-wrapper {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    @media screen and (max-width: 1199px) {
+      .content-wrapper {
+        .btn {
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 424px) {
+    .container {
+      width: 22rem;
+    }
+  }
+  @media screen and (min-width: 1199px) {
+    .container {
+      width: 40%;
+      height: 50%;
+      display: flex;
+    }
+  }
+  .attribution {
+    position: absolute;
+    bottom: 40px;
+    color: $Dark-grayish-blue;
+    font-family: "Montserrat";
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-bottom: 0.65rem;
+      }
+    }
+  }
+}

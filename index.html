@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <!-- Main CSS File -->
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container" role="main">
+      <img
+        src="./assets/images/image-product-mobile.jpg"
+        class="perfume-img-mobile"
+        alt="Perfume-image"
+      />
+      <img
+        src="./assets/images/image-product-desktop.jpg"
+        class="perfume-img-desktop"
+        alt="Perfume-image"
+      />
+      <div class="content-wrapper">
+        <div class="prefume-name">
+          <h1>Gabrielle Essence Eau De Parfum</h1>
+        </div>
+        <div class="info">
+          <p>
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="price-tag">
+            <span class="current-price">$149.99</span>
+            <span class="actual-price"><del>$169.99</del></span>
+          </div>
+          <button class="btn">
+            <img
+              src="./assets/images/icon-cart.svg"
+              class="icon"
+              alt="icon-cart"
+            />
+            <span>Add to Cart</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer class="attribution" aria-label="links" role="footer">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        aria-label="front-end mentor website"
+        >Frontend Mentor</a
+      >. Coded by <br />
+      <a
+        href="https://www.frontendmentor.io/profile/Abo3bazez"
+        aria-label="developer's profile on front-end mentor"
+        >Ahmed Aziz</a
+      >.
+    </footer>
+  </body>
+</html>
